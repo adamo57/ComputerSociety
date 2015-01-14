@@ -1,25 +1,26 @@
 Rails.application.routes.draw do
-  get 'static_pages/home'
 
-  get 'static_pages/about'
+  get 'users/new'
 
-  get 'static_pages/contact'
+  root            'static_pages#home'
 
-  get 'static_pages/careers'
+  get 'about'  =>  'static_pages#about'
 
-  get 'static_pages/internships'
+  get 'contact' =>  'static_pages#contact'
 
-  get 'static_pages/events'
+  get 'careers' =>  'static_pages#careers'
 
-  get 'home/about'
+  get 'internships' =>  'static_pages#internships'
 
-  get 'home/contact'
+  get 'events' =>   'static_pages#events'
 
-  get 'home/careers'
+  get 'signup'  =>  'users#new'
 
-  get 'home/internships'
+  get 'login' =>  'sessions#new'
 
-  get 'home/events'
+  post  'login' =>  'sessions#create'
+
+  delete  'logout'  =>  'sessions#destroy'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
