@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Position:</strong>
+  <%= @full_time_position.position %>
+</p>
+
+<p>
+  <strong>Company:</strong>
+  <%= @full_time_position.company %>
+</p>
+
+<p>
+  <strong>Link:</strong>
+  <%= @full_time_position.link %>
+</p>
+
+<%= link_to 'Edit', edit_full_time_position_path(@full_time_position) %> |
+<%= link_to 'Back', full_time_positions_path %>

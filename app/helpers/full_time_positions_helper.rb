@@ -1,0 +1,2 @@
+module FullTimePositionsHelper
+end

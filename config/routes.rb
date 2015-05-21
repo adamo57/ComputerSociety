@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  resources :internship_positions
+
+  resources :full_time_positions
+
   get 'users/new'
 
   root            'static_pages#home'
@@ -8,9 +12,9 @@ Rails.application.routes.draw do
 
   get 'contact' =>  'static_pages#contact'
 
-  get 'careers' =>  'static_pages#careers'
+  get 'careers' =>  'full_time_positions#index'
 
-  get 'internships' =>  'static_pages#internships'
+  get 'internships' =>  'internship_positions#index'
 
   get 'events' =>   'static_pages#events'
 
