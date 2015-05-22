@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+<<<<<<< HEAD
   resources :internship_positions
 
   resources :full_time_positions
@@ -7,6 +8,8 @@ Rails.application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
 
+=======
+>>>>>>> parent of 995b946... Added Full-Time/Internship position functionality
   get 'users/new'
 
   root                                'static_pages#home'
@@ -15,9 +18,9 @@ Rails.application.routes.draw do
 
   get 'contact'           =>          'static_pages#contact'
 
-  get 'careers' =>  'full_time_positions#index'
+  get 'careers' =>  'static_pages#careers'
 
-  get 'internships' =>  'internship_positions#index'
+  get 'internships' =>  'static_pages#internships'
 
   get 'events'           =>           'static_pages#events'
 
