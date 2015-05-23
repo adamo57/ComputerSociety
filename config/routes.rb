@@ -4,29 +4,27 @@ Rails.application.routes.draw do
 
   resources :full_time_positions
 
-  devise_for :admin_users, ActiveAdmin::Devise.config
-  ActiveAdmin.routes(self)
-
   get 'users/new'
 
-  root                                'static_pages#home'
+  root                                 'static_pages#home'
+  get 'admin' => 'admin#home'
 
-  get 'about'             =>          'static_pages#about'
+  get 'about'             =>           'static_pages#about'
 
-  get 'contact'           =>          'static_pages#contact'
+  get 'contact'           =>           'static_pages#contact'
 
-  get 'careers' =>  'full_time_positions#index'
+  get 'careers'           =>           'full_time_positions#index'
 
-  get 'internships' =>  'internship_positions#index'
+  get 'internships'       =>           'internship_positions#index'
 
-  get 'events'           =>           'static_pages#events'
+  get 'events'            =>           'static_pages#events'
 
-  get 'signup'           =>           'users#new'
+  get 'signup'            =>           'users#new'
 
-  get 'login'            =>           'sessions#new'
+  get 'login'             =>           'sessions#new'
 
-  post  'login'          =>           'sessions#create'
+  post  'login'           =>           'sessions#create'
 
-  delete  'logout'       =>           'sessions#destroy'
+  delete  'logout'        =>           'sessions#destroy'
 
 end
