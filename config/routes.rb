@@ -1,13 +1,13 @@
 Rails.application.routes.draw do
 
+  devise_for :users
+  devise_for :admins
+  
   resources :internship_positions
 
   resources :full_time_positions
 
-  get 'users/new'
-
   root                                 'static_pages#home'
-  get 'admin' => 'admin#home'
 
   get 'about'             =>           'static_pages#about'
 
@@ -18,13 +18,5 @@ Rails.application.routes.draw do
   get 'internships'       =>           'internship_positions#index'
 
   get 'events'            =>           'static_pages#events'
-
-  get 'signup'            =>           'users#new'
-
-  get 'login'             =>           'sessions#new'
-
-  post  'login'           =>           'sessions#create'
-
-  delete  'logout'        =>           'sessions#destroy'
 
 end
