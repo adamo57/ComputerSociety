@@ -12,7 +12,7 @@ html {
   background-size: cover;
 }
 .tron{
-    color: #18CAE6;
+    color: #46d4eb;
     background-color: #000000;
     font-family: Raleway;
     font-weight:900;
@@ -42,7 +42,20 @@ body{
     color: #18CAE6;
     background-color: #000000;
     border-bottom: 1px solid #18CAE6;
-}        
+}    
+.nav-pills li>a{
+    background-image: none;
+    color: #18CAE6;
+    background-color: #000000;
+    border-bottom: 1px solid transparent;
+}
+.nav.nav-pills > li.dropdown.active.open > a, 
+.nav.nav-pills > li.dropdown.active.open > ul.dropdown-menu a:hover,
+.nav.nav-pills > li.dropdown.open > a, 
+.nav.nav-pills > li.dropdown.open > ul.dropdown-menu a:hover
+{
+  background-color: #000000;
+}
 #footer {
   position: relative;
   margin 0px auto{}
