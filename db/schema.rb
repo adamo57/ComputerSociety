@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150523191551) do
+ActiveRecord::Schema.define(version: 20151012185245) do
 
   create_table "admins", force: true do |t|
     t.string   "email",              default: "", null: false
@@ -36,12 +36,34 @@ ActiveRecord::Schema.define(version: 20150523191551) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "galleries", force: true do |t|
+    t.string   "name"
+    t.string   "description"
+    t.integer  "cover"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "token"
+  end
+
   create_table "internship_positions", force: true do |t|
     t.string   "position"
     t.string   "company"
     t.string   "link"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "pictures", force: true do |t|
+    t.string   "description"
+    t.string   "image"
+    t.integer  "gallery_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "gallery_token"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
   end
 
 end

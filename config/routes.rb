@@ -7,6 +7,9 @@ Rails.application.routes.draw do
 
   resources :full_time_positions
 
+  resources :galleries 
+  resources :pictures
+
   root                                 'static_pages#home'
 
   get 'about'             =>           'static_pages#about'
@@ -18,5 +21,7 @@ Rails.application.routes.draw do
   get 'internships'       =>           'internship_positions#index'
 
   get 'events'            =>           'static_pages#events'
+
+  get 'galleries'         =>           'galleries#index'
 
 end
