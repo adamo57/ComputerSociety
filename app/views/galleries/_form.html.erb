@@ -1,19 +1,19 @@
-<%= form_for @gallery, :html => { :class => 'form-horizontal tron', multipart: true } do |f| %>
+<%= form_for @gallery, :html => { :class => 'form-horizontal tron-font', multipart: true } do |f| %>
   <div class="control-group">
-    <%= f.label :name, :class => 'control-label tron' %>
+    <%= f.label :name, :class => 'control-label tron-font' %>
     <div class="controls">
       <%= f.text_field :name, :class => 'text_field' %>
     </div>
   </div>
   <div class="control-group">
-    <%= f.label :description, :class => 'control-label tron' %>
+    <%= f.label :description, :class => 'control-label tron-font' %>
     <div class="controls">
       <%= f.text_field :description, :class => 'text_field' %>
     </div>
   </div>
 
   <div class="control-group">
-    <%= f.label :pictures, :class => 'control-label tron' %>
+    <%= f.label :pictures, :class => 'control-label tron-font' %>
     <div class="controls">
       <!-- The magic is coming ...look at my eyes....shazammmm -->
       <!-- Use HTML5 multiple attribute to enable multiple selection
@@ -25,9 +25,9 @@
     </div>
   </div>
 
-  <div class="form-actions tron">
+  <div class="form-actions tron-font">
     <%= f.submit nil, :class => 'btn btn-primary' %>
     <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
-                galleries_path, :class => 'btn btn-mini' %>
+                galleries_path, :class => 'btn btn-mini btn-danger' %>
   </div>
 <% end %>
