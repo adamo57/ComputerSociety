@@ -1,5 +1,5 @@
 <div class="row tron-font">
-  <h1 >Gallery</h1>
+  <h1>Gallery</h1>
 
   <input type="hidden" id="galleryID" value="<%= @gallery.id %>">
 
@@ -16,6 +16,7 @@
 <h2 class="tron-font">Pictures</h2>
 </div>
 
+<!-- Display Photos in Gallery -->
 <div class="row tron-font">
   <ul class="list-inline">
   <% unless @pictures.empty? %>
@@ -24,30 +25,16 @@
         <div class="thumbnail">
           <%= image_tag pic.image.url %>
         </div>
-        <div class="caption tron-font">
-          <p style="text-align: center;">
-          <%= 
-            link_to "", picture_path(pic),
-            :class => 'glyphicon glyphicon-pencil'
-          %>
-
-          <%=
-            link_to "", pic,
-              :data => { :confirm => "Are you sure?" },
-              :method => :delete, :class => 'glyphicon glyphicon-remove'
-            %>
-
-          </p>
-        </div>
       </li>
     <% end %>
   <% end %>
   </ul>
 </div>
+
+<!-- Admin only Controls -->
 <div class="row">
   <div class="col-md-12 form-actions tron-font">
     <%= link_to 'Back', galleries_path, :class => 'btn btn-primary'  %>
     <%= link_to 'Edit gallery', edit_gallery_path(@gallery), :class => 'btn btn-success' %>
-    <%= link_to 'Delete gallery', gallery_path(@gallery), :method => 'delete', :confirm => 'Are you sure?', :class => 'btn btn-danger' %>
   </div> 
 </div>

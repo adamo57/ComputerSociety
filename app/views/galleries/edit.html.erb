@@ -1,6 +1,37 @@
 <%- model_class = @gallery.class -%>
-<div class="page-header tron">
+<div class="page-header tron-font">
   <h1><%=t '.title', :default => t('helpers.titles.edit', :model => model_class.model_name.human,
                                    :default => "Edit #{model_class.model_name.human}") %></h1>
 </div>
+
 <%= render :partial => 'form' %>
+
+<div class="row tron-font">
+  <ul class="list-inline">
+  <% unless @pictures.empty? %>
+    <% @pictures.each do |pic| %>
+      <li class="span3 tron-thumbnail col-md-3" id="picture_<%= pic.id %>">
+        <div class="thumbnail">
+          <%= image_tag pic.image.url %>
+        </div>
+        <div class="caption tron-font">
+          <p style="text-align: center;">
+          <%=
+            link_to "", pic,
+              :data => { :confirm => "Are you sure?" },
+              :method => :delete, :class => 'glyphicon glyphicon-remove'
+            %>
+
+          </p>
+        </div>
+      </li>
+    <% end %>
+  <% end %>
+  </ul>
+</div>
+<div class="row">
+	<div class="col-md-12 form-actions tron-font">
+		<%= link_to 'Back', galleries_path, :class => 'btn btn-primary'  %>
+		<%= link_to 'Delete gallery', gallery_path(@gallery), :method => 'delete', :confirm => 'Are you sure?', :class => 'btn btn-danger' %>
+	</div>
+</div>

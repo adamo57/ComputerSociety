@@ -4,7 +4,7 @@
   <ul class="list-inline" style="list-style-type: none;">
     <% @galleries.each do |gallery| %>
         <li class="tron-thumbnail col-md-4" id="gallery_<%= gallery.id %>">
-          <div class="thumbnail tron-thumbnail">
+          <div class="thumbnail tron-thumbnail tron-font">
             <% if gallery.pictures.first %>
             <%= link_to image_tag(gallery.pictures.first.image.url), gallery_path(gallery) %>
             <% else %>
@@ -12,15 +12,11 @@
               N/A
             </div>
             <% end %>
-            <div class="caption tron-font">
-              <p style="text-align: center;">
+            <div class="caption">
+              <p class="tron-font" style="text-align: center;">
                 <%= gallery.name.truncate(14) %>
+                <br>
                 <%= link_to "", gallery_path(gallery), :class => 'glyphicon glyphicon-search' %>
-                <%= link_to "", edit_gallery_path(gallery), :class => 'glyphicon glyphicon-pencil' %>
-                <%= link_to "", gallery,
-                  :data => { :confirm => "Are you sure?" },
-                  :method => :delete, :class => 'glyphicon glyphicon-remove'
-                %>
               </p>
             </div>
           </div>

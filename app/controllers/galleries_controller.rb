@@ -34,6 +34,12 @@ class GalleriesController < ApplicationController
   # GET /galleries/1/edit
   def edit
     @gallery = Gallery.find(params[:id])
+    @pictures = @gallery.pictures
+
+    respond_to do |format|
+      format.html # show.html.erb
+      format.json { render json: @gallery }
+    end
   end
 
   # POST /galleries
