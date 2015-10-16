@@ -1,6 +1,8 @@
 <div class="row" id="index">
   <h1 class= "tron-font">Galleries</h1>
-  <%= link_to 'New Gallery', new_gallery_path, :class => 'btn btn-success glyphicon glyphicon-plus' %>
+  <% if admin_signed_in? %>
+    <%= link_to 'New Gallery', new_gallery_path, :class => 'btn btn-success glyphicon glyphicon-plus' %>
+  <% end %>
   <ul class="list-inline" style="list-style-type: none;">
     <% @galleries.each do |gallery| %>
         <li class="tron-thumbnail col-md-4" id="gallery_<%= gallery.id %>">
