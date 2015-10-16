@@ -19,7 +19,8 @@
           <%=
             link_to "", pic,
               :data => { :confirm => "Are you sure?" },
-              :method => :delete, :class => 'glyphicon glyphicon-remove'
+              :method => :delete, :class => 'glyphicon glyphicon-remove link-delete',
+              :remote => true
             %>
 
           </p>
@@ -35,3 +36,9 @@
 		<%= link_to 'Delete gallery', gallery_path(@gallery), :method => 'delete', :confirm => 'Are you sure?', :class => 'btn btn-danger' %>
 	</div>
 </div>
+
+<script>
+  $('.link-delete').bind('ajax:complete', function(){
+    $(this).fadeOut('slow');
+  });
+</script>
