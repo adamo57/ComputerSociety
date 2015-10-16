@@ -16,6 +16,9 @@ gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
+#Use devise for admin functionality
+gem 'devise'
+
 #gem for photo uploads
 gem "paperclip", "~> 4.3"
 

@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  devise_for :admins
   resources :internship_positions
 
   resources :full_time_positions
