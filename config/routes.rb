@@ -22,4 +22,6 @@ Rails.application.routes.draw do
 
   get 'galleries'         =>           'galleries#index'
 
+  get 'admin'             =>           'admin#index'
+
 end
