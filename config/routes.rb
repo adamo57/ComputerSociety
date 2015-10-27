@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  
+
   resources :internship_positions
 
   resources :full_time_positions
