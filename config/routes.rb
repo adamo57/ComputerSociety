@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  devise_for :admins
   resources :internship_positions
 
   resources :full_time_positions
@@ -20,5 +21,7 @@ Rails.application.routes.draw do
   get 'events'            =>           'static_pages#events'
 
   get 'galleries'         =>           'galleries#index'
+
+  get 'admin'             =>           'admin#index'
 
 end

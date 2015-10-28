@@ -5,3 +5,11 @@
     <iframe src="https://www.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showTabs=0&amp;showCalendars=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23fffffA&amp;src=adamouellette57%40gmail.com&amp;color=%232F6309&amp;ctz=America%2FNew_York" style=" border-width:0 " width="1000" height="600" frameborder="0" scrolling="no">             
     </iframe>
 </div>
+
+<% if admin_signed_in? %>
+	<div class="row">
+		<div class="col-md-4">
+			<button class="btn btn-success">Create New Calendar Event</button>
+		</div>
+	</div>
+<% end %>
