@@ -2,6 +2,13 @@ Rails.application.routes.draw do
   
   devise_for :users
   devise_for :admins
+
+  resources :posts
+
+  resources :topics
+
+  resources :forums
+
   resources :internship_positions
 
   resources :full_time_positions
@@ -23,8 +30,6 @@ Rails.application.routes.draw do
 
   get 'galleries'         =>           'galleries#index'
 
-  get 'admin'             =>           'admin#index'
-
-  get 'user'              =>           'user#index'
+  get 'forums'             =>           'forums#index'
 
 end

@@ -11,7 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20151028235504) do
+=======
+ActiveRecord::Schema.define(version: 20151027234919) do
+>>>>>>> recent_activity_feature
 
   create_table "admins", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -92,6 +96,7 @@ ActiveRecord::Schema.define(version: 20151028235504) do
     t.integer  "forum_id"
   end
 
+<<<<<<< HEAD
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
@@ -110,4 +115,6 @@ ActiveRecord::Schema.define(version: 20151028235504) do
   add_index "users", ["email"], name: "index_users_on_email", unique: true
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
 
+=======
+>>>>>>> recent_activity_feature
 end
