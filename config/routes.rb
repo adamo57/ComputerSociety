@@ -27,4 +27,6 @@ Rails.application.routes.draw do
 
   get 'galleries'         =>           'galleries#index'
 
+  get 'forums'             =>           'forums#index'
+
 end
