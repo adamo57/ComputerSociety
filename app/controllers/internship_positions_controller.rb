@@ -44,10 +44,10 @@ class InternshipPositionsController < ApplicationController
   # POST /internship_position
   # POST /internship_position.json
   def create
-  	@internship_position = InternshipPosition.new(full_time_position_params)
+  	@internship_position = InternshipPosition.new(internship_position_params)
 
   	respond_to do |format|
-  		if internship_position.save
+  		if @internship_position.save
   			format.html { redirect_to @internship_position, notice: 'Position was successfully created'}
   			format.json { render json: @internship_position, status: :created, location: @internship_position }
   		else
@@ -63,7 +63,7 @@ class InternshipPositionsController < ApplicationController
   	@internship_position = InternshipPosition.find(params[:id])
 
   	respond_to do |format|
-  		if @internship_position.update_attributes(full_time_position_params)
+  		if @internship_position.update_attributes(internship_position_params)
   			format.html { redirect_to @internship_position, notice: 'Posiiton was successfully updated.' }
   			format.json { head :no_content }
   		else
@@ -80,7 +80,7 @@ class InternshipPositionsController < ApplicationController
   	@internship_position.destroy
 
   	respond_to do |format|
-  		format.html { redirect_to full_time_position_url }
+  		format.html { redirect_to root_path, notice: 'Posiiton was successfully destroyed.' }
   		format.json { head :no_content }
   	end
   end

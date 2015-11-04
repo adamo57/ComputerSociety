@@ -47,7 +47,7 @@ class FullTimePositionsController < ApplicationController
   	@full_time_position = FullTimePosition.new(full_time_position_params)
 
   	respond_to do |format|
-  		if full_time_position.save
+  		if @full_time_position.save
   			format.html { redirect_to @full_time_position, notice: 'Position was successfully created'}
   			format.json { render json: @full_time_position, status: :created, location: @full_time_position }
   		else
@@ -80,7 +80,7 @@ class FullTimePositionsController < ApplicationController
   	@full_time_position.destroy
 
   	respond_to do |format|
-  		format.html { redirect_to full_time_position_url }
+  		format.html { redirect_to root_path, notice: 'Posiiton was successfully destroyed.' }
   		format.json { head :no_content }
   	end
   end
