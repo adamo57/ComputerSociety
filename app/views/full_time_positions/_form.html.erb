@@ -1,7 +1,7 @@
 <%= form_for(@full_time_position) do |f| %>
   <% if @full_time_position.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@full_time_position.errors.count, "error") %> prohibited this full_time_position from being saved:</h2>
+      <h2 class="tron-font"><%= pluralize(@full_time_position.errors.count, "error") %> prohibited this full_time_position from being saved:</h2>
 
       <ul>
       <% @full_time_position.errors.full_messages.each do |message| %>
@@ -12,15 +12,15 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :position , :class=> 'tron'%><br>
+    <%= f.label :position,  :class=> 'tron-font' %><br>
     <%= f.text_field :position %>
   </div>
   <div class="field">
-    <%= f.label :company,  :class=> 'tron'%><br>
+    <%= f.label :company,  :class=> 'tron-font' %><br>
     <%= f.text_field :company %>
   </div>
   <div class="field">
-    <%= f.label :link,  :class=> 'tron'%><br>
+    <%= f.label :link,  :class=> 'tron-font' %><br>
     <%= f.text_field :link %>
   </div>
   <div class="actions">

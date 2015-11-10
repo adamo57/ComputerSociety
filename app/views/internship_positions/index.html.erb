@@ -19,7 +19,7 @@
             <tr>
               <td><%= internship_position.position %></td>
               <td><%= internship_position.company %></td>
-              <td><%= internship_position.link %></td>
+              <td><%= link_to internship_position.link %></td>
             </tr>
           <% end %>
         </tbody>
@@ -48,6 +48,7 @@
     <% end %>
   </div>
   <br>
-
-  <%= link_to 'New Internship position', new_internship_position_path, :class=>"btn btn-success glyphicon glyphicon-plus" %>
+  <% if admin_signed_in? %>
+    <%= link_to 'New Internship position', new_internship_position_path, :class=>"btn btn-success glyphicon glyphicon-plus" %>
+  <% end %>
 </div>

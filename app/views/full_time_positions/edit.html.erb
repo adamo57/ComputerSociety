@@ -1,6 +1,8 @@
-<h1>Editing Full Time Position</h1>
+<h1 class="tron-font">Editing Full Time Position</h1>
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @full_time_position %> |
-<%= link_to 'Back', full_time_positions_path %>
+<div class="btn-group">
+	<%= link_to 'Show', @full_time_position, :class=>"btn btn-info" %>
+	<%= link_to 'Back', full_time_positions_path, :class=>"btn btn-primary" %>
+</div>

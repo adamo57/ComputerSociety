@@ -1,19 +1,28 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Position:</strong>
-  <%= @full_time_position.position %>
-</p>
+<div class="jumbotron tron">
+	<p>
+	  <strong>Position:</strong>
+	  <div style="color: #FFFFFF;">
+	 	 <%= @full_time_position.position %>
+	  </div>
+	</p>
 
-<p>
-  <strong>Company:</strong>
-  <%= @full_time_position.company %>
-</p>
+	<p>
+	  <strong>Company:</strong>
+	  <div style="color: #FFFFFF;">
+	 	 <%= @full_time_position.company %>
+	  </div>
+	</p>
 
-<p>
-  <strong>Link:</strong>
-  <%= @full_time_position.link %>
-</p>
-
-<%= link_to 'Edit', edit_full_time_position_path(@full_time_position) %> |
-<%= link_to 'Back', full_time_positions_path %>
+	<p>
+	  <strong>Link:</strong>
+	  <div style="color: #FFFFFF;">
+	 	 <%= @full_time_position.link %>
+	  </div>
+	</p>
+	<div class="btn-group">
+		<%= link_to 'Edit', edit_full_time_position_path(@full_time_position), :class=>"btn btn-success" %> |
+		<%= link_to 'Back', full_time_positions_path, :class=>"btn btn-primary" %>
+	</div>
+</div>
