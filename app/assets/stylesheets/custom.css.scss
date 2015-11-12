@@ -12,7 +12,7 @@ html {
   background-size: cover;
 }
 .tron{
-    color: #46d4eb;
+    color: #FFF;
     background-color: #000000;
     font-family: Raleway;
     font-weight:900;
@@ -20,7 +20,7 @@ html {
 }
 
 .tron-font{
-  color: #46d4eb;
+  color: #FFF;
   background-color: transparent;
   font-family: Raleway;
   font-weight:900;
@@ -66,13 +66,13 @@ body{
 }
 .nav-pills li>a:hover{
     background-image: none;
-    color: #18CAE6;
+    color: #FFF;
     background-color: #000000;
-    border-bottom: 1px solid #18CAE6;
+    border-bottom: 1px solid #FFF;
 }    
 .nav-pills li>a{
     background-image: none;
-    color: #18CAE6;
+    color: #FFF;
     background-color: #000000;
     border-bottom: 1px solid transparent;
 }
@@ -130,20 +130,20 @@ a{
 
 a:hover{
     border-width: 0;
-    border-color: #18CAE6;
+    border-color: #FFF;
 }
 
   /*-- change navbar dropdown color --*/
 .dropdown-menu>li>a{
-    color: #18CAE6;
+    color: #FFF;
     background-color: #000000;
   }
 
 .dropdown-menu li > a:hover, .dropdown-menu li > a:focus{
     background-image: none;
-    color: #18CAE6;
+    color: #FFF;
     background-color: #000000;
-    border: 1px solid #18CAE6;
+    border: 1px solid #FFF;
 }
 
 .table-wrapper th{
